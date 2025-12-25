@@ -55,7 +55,7 @@ for name, model in models:
   cv_results = model_selection.cross_val_score(model, X, y, cv=kfold)
   results.append(cv_results)
   names.append(name)
-  msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+  msg = "%s: Media de score de CV ó accuracy media: %f, (Desviación estandard: %f)" % (name, cv_results.mean(), cv_results.std())
   
   print(msg)
   msg
